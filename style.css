@@ -1,0 +1,610 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif; /* ADT typically uses a clean sans-serif */
+}
+
+.site-header {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.header-container {
+  /*max-width: 1200px;*/
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* This creates the left/right split */
+  align-items: center;
+  padding: 0 40px;
+}
+
+.logo img {
+  height: 80px; /* Adjust based on your actual image assets */
+  display: block;
+}
+
+.header-cta {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0037a4; /* ADT Blue */
+}
+
+.header-cta span {
+  margin-right: 8px;
+}
+
+.phone-number {
+  color: #0037a4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.phone-number:hover {
+  color: #002670; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .header-cta {
+    font-size: 18px;
+  }
+}
+.hero-section {
+  
+  background:url(images/hero.jpg);
+  padding: 60px 20px;
+  color: white;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -93px;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* Form is slightly narrower than content */
+  gap: 40px;
+  align-items: start;
+}
+
+/* Typography */
+.hero-title { font-size: 3rem; font-weight: bold; }
+.hero-subtitle { font-size: 2.2rem; color: #0037a4; margin-top: 10px; }
+
+/* The House Shape Image Mask */
+.house-mask {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 30px;
+  /* Creates a 5-point polygon (the house shape) */
+  clip-path: polygon(50% 0%, 100% 35%, 100% 100%, 0 100%, 0 35%);
+}
+
+.house-mask img {
+  width: 100%;
+  display: block;
+}
+
+/* The Form Card */
+.hero-form-container {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  color: #333;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.form-header {
+  background: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.quote-form {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.quote-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  background: #0037a4;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.form-disclaimer {
+  font-size: 0.7rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+  }
+}
+.trust-section {
+  background-color: #f7f9fb; /* Light grey background */
+  padding: 80px 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  /*max-width: 1200px;*/
+  margin: 0 auto;
+}
+
+.main-heading {
+  color: #0072ce; /* Bright Blue */
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.footnote-top {
+  font-size: 12px;
+  color: #0072ce;
+  margin-bottom: 50px;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.trust-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 30px; /* Highly rounded corners */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers text vertically */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.trust-card h3 {
+  color: #0072ce;
+  font-size: 22px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.trust-card p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.disclaimer-text {
+  font-size: 10px;
+  color: #999;
+  margin-top: 15px;
+  line-height: 1.3;
+}
+
+/* Responsive: Stack cards on mobile */
+@media (max-width: 900px) {
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .main-heading {
+    font-size: 24px;
+  }
+}
+.monitoring-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.monitoring-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.section-title {
+  color: #0056b3;
+  font-size: 28px;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+
+/* Bullet points styling */
+.benefit-list {
+  list-style: none;
+  padding: 0;
+}
+
+.benefit-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 20px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.benefit-list li::before {
+  content: "•";
+  color: #0056b3;
+  font-size: 30px;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+
+/* Octagon Masking */
+.monitoring-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.octagon-mask {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  /* The octagon math: 30% and 70% points create the cut corners */
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.octagon-mask img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Decorative Dot Pattern */
+.dot-pattern {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 100px;
+  background-image: radial-gradient(#31a1ff 2px, transparent 2px);
+  background-size: 15px 15px; /* Adjust for dot density */
+  z-index: 0;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  background: #001a72;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.phone-cta {
+  color: #001a72;
+  font-weight: bold;
+}
+
+.legal-footnote {
+  font-size: 10px;
+  color: #888;
+  margin-top: 30px;
+}
+
+.features-section {
+  padding: 40px 20px;
+  background-color: #f7f9fb; /* Match the light grey background from previous sections */
+}
+
+.features-card {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 50px 30px;
+  border-radius: 40px; /* Large rounded corners */
+  text-align: center;
+}
+
+.features-title {
+  color: #0072ce;
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.features-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Creating the custom checkmark icon */
+.check-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #0072ce;
+  border-radius: 50%; /* Circle background */
+  margin-right: 12px;
+  position: relative;
+}
+
+.check-icon::after {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.features-disclaimer {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 11px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.features-disclaimer p {
+  margin-bottom: 5px;
+}
+
+/* Mobile: Stack items vertically */
+@media (max-width: 768px) {
+  .features-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .feature-item {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.advantage-header {
+  padding: 60px 20px 30px 20px; /* Generous top padding to separate from the previous section */
+  background-color: #ffffff;    /* Usually sits on a clean white background */
+}
+
+.advantage-title {
+  color: #0072ce;               /* Standard ADT Blue */
+  font-size: 36px;              /* Large and impactful */
+  font-weight: 700;             /* Bold weight */
+  text-align: center;           /* Horizontal centering */
+  font-family: 'Arial', sans-serif; 
+  letter-spacing: -0.5px;       /* Tightens the look for a more premium feel */
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .advantage-title {
+    font-size: 28px;
+  }
+}
+.final-cta-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.cta-container {
+  display: flex;
+  flex-direction: column; /* Stacks button above text */
+  align-items: center;    /* Centers horizontally */
+  gap: 20px;              /* Space between button and text */
+}
+
+.btn-pill {
+  display: inline-block;
+  background-color: #001a72; /* Darker Navy Blue */
+  color: #ffffff;
+  padding: 18px 60px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 50px;     /* Pill shape */
+  transition: background-color 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn-pill:hover {
+  background-color: #00114d;
+}
+
+.phone-link {
+  font-size: 20px;
+  color: #0072ce; /* Lighter Blue */
+  font-family: sans-serif;
+}
+
+.phone-link a {
+  color: #0072ce;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.phone-link a:hover {
+  text-decoration: underline;
+}
+.contact-hero {
+  background-color: #31a1ff; /* ADT Bright Blue */
+  background:url(images/top.jpg);
+  padding: 80px 0px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Center Octagon */
+.octagon-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.octagon-mask-center {
+  width: 350px;
+  height: 259px;
+  /* Same 8-sided polygon as the previous section */
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.octagon-mask-center img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Typography */
+.contact-title {
+  font-size: 32px;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+/* White Pill Button */
+.call-btn-white {
+  display: inline-block;
+  background-color: white;
+  color: #0037a4;
+  padding: 15px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.call-btn-white:hover {
+  transform: scale(1.05);
+}
+
+.footnote-white {
+  font-size: 11px;
+  margin-top: 30px;
+  opacity: 0.9;
+}
+
+/* Decorative Dots */
+.dots-left, .dots-right {
+  position: absolute;
+  top: 50px;
+  width: 150px;
+  height: 150px;
+  background-image: radial-gradient(rgba(255,255,255,0.6) 2px, transparent 2px);
+  background-size: 15px 15px;
+}
+
+.dots-left { left: -20px; }
+.dots-right { right: -20px; }
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .contact-title { font-size: 24px; }
+  .octagon-mask-center { width: 250px; height: 250px; }
+  .dots-left, .dots-right { display: none; }
+}
+.legal-footer {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  border-top: 1px solid #eeeeee;
+  font-family: Arial, sans-serif;
+}
+
+.disclosure-text {
+  max-width: 1100px;
+  margin: 0 auto;
+  color: #777777; /* Soft gray for low visual weight */
+  font-size: 11px;  /* Traditional "fine print" size */
+  line-height: 1.6;
+  text-align: left;
+}
+
+.disclosure-text p {
+  margin-bottom: 15px;
+}
+
+address {
+  font-style: normal;
+  margin: 20px 0;
+  color: #555555;
+}
+
+.partner-note {
+  margin-top: 20px;
+}
+
+.footer-links {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #555555;
+}
+
+.footer-links a {
+  color: #555555;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Ensure legibility on small screens */
+@media (max-width: 600px) {
+  .disclosure-text {
+    font-size: 10px;
+    text-align: justify;
+  }
+}
